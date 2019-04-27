@@ -1,0 +1,137 @@
+// Add your styles here
+
+$max-page-width: 1440px;
+$margin-sm : 48px;
+$sl-font-regular: 400;
+$sl-font-bold: 700;
+$main-font: 'raleway', Helvetica, Arial, sans-serif;
+$color-accent: #fa9917;
+
+body {
+  position: relative;
+  min-height: 100vh;
+  font-family: $main-font;
+  background: url('/images/hhlines.jpg') repeat;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: $max-page-width;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    img {
+      max-width: 200px;
+      width: 100%;
+      height: auto;
+      margin: $margin-sm 0;
+    }
+  }
+
+  .where {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: $sl-font-regular;
+    max-width: 300px;
+
+    strong {
+      margin-top: $margin-sm/2;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .small {
+      font-size: 14px;
+      line-height: 16px;
+      color: #777;
+      font-weight: $sl-font-regular;
+    }
+
+    .social {
+      display: flex;
+      flex-direction: row;
+      max-height: 40px;
+
+      img {
+        height: 40px;
+        width: 40px;
+        margin-right: $margin-sm/3;
+        transition: opacity 0.2s ease-in-out;
+
+        &:hover {
+          opacity: 0.9;
+        }
+      }
+    }
+
+    button {
+      margin-top: $margin-sm*1.15;
+    }
+  }
+}
+
+.bg-img {
+  margin-top: $margin-sm*1.5;
+  width: 100%;
+  min-height: 200px;
+  height: 100%;
+  background-image: url('/images/food.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center 60%;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: $margin-sm/4 $margin-sm/2;
+  border-radius: 0;
+  margin: 0;
+  text-decoration: none;
+  background-color: $color-accent;
+  color: white;
+  font-size: 18px;
+  font-weight: $sl-font-bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow 250ms ease-in-out, transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+}
+
+button:hover,
+button:focus {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.97);
+}
